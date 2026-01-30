@@ -13,6 +13,7 @@ jobs:
         with:
           filters: |
             web-app: ./**/web-app/**
+            web-app-fullstack: ./**/web-app-fullstack/**
   test:
     needs: [detect-changes]
     runs-on: ubuntu-latest

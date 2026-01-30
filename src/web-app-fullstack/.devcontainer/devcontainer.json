@@ -1,0 +1,29 @@
+{
+  "name": "Web Application Fullstack (Bun + TS)",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "installOhMyZshConfig": true
+    },
+    "ghcr.io/rails/devcontainer/features/postgres-client:1": {},
+    "ghcr.io/shyim/devcontainers-features/bun:0": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/stu-bell/devcontainer-features/open-code:0": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "biomejs.biome"
+      },
+      "extensions": ["biomejs.biome", "oven.bun-vscode", "prisma.prisma"]
+    }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}/.config/opencode,target=/home/node/.config/opencode,type=bind,readonly"
+  ]
+}
