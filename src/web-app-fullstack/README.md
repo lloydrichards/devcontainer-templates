@@ -13,4 +13,4 @@ Fullstack web app DX template with Postgres and Redis.
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/lloydrichards/devcontainer-template/blob/main/src/web-app-fullstack/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/lloydrichards/devcontainer-templates/blob/main/src/web-app-fullstack/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
