@@ -6,21 +6,31 @@ This repo hosts reusable devcontainer templates for projects and teams.
 
 Use a template by referencing its image in `devcontainer.json`:
 
-```json
+```jsonc
 {
   "name": "My Project",
   "image": "ghcr.io/lloydrichards/devcontainer-templates/web-app:latest"
+  // "features": { ...  },
+  // "customizations": { ...  }
 }
 ```
 
-See `docs/catalog.md` for all templates and `docs/learning/` for a short
-learning path.
+### Available templates
+
+Template IDs map to `src/` folder names and GHCR image names.
+
+| Template ID | Image (latest) |
+| --- | --- |
+| `mobile-app` | `ghcr.io/lloydrichards/devcontainer-templates/mobile-app:latest` |
+| `web-app` | `ghcr.io/lloydrichards/devcontainer-templates/web-app:latest` |
+| `web-app-fullstack` | `ghcr.io/lloydrichards/devcontainer-templates/web-app-fullstack:latest` |
+
+Pin a version by replacing `latest` with a published tag (for example `:v0.3.1`).
 
 ## Repository layout
 
 - `src/<template-id>`: Template definitions.
 - `test/<template-id>`: Template tests.
-- `docs/templates`: Template docs.
 
 ## Add a template
 
