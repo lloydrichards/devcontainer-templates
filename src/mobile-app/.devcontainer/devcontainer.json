@@ -1,0 +1,23 @@
+{
+  "name": "Mobile App (Flutter + Dart)",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "installOhMyZshConfig": true
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/stu-bell/devcontainer-features/open-code:0": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["dart-code.dart-code", "dart-code.flutter"]
+    }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}/.config/opencode,target=/home/node/.config/opencode,type=bind,readonly"
+  ]
+}

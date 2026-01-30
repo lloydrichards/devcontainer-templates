@@ -1,0 +1,9 @@
+{
+  "id": "mobile-app",
+  "version": "0.1.0",
+  "name": "Mobile Application (Flutter + Dart)",
+  "description": "Mobile application DX template for Flutter, Dart, Android CLI, and Flutter web.",
+  "documentationURL": "https://github.com/lloydrichards/devcontainer-template/blob/main/docs/templates/mobile-app.md",
+  "platforms": ["Flutter", "Dart", "Android", "Web"],
+  "keywords": ["mobile", "flutter", "dart", "android", "web", "zsh"]
+}

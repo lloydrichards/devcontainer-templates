@@ -12,6 +12,7 @@ jobs:
         id: filter
         with:
           filters: |
+            mobile-app: ./**/mobile-app/**
             web-app: ./**/web-app/**
             web-app-fullstack: ./**/web-app-fullstack/**
   test:
