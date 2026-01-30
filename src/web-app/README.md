@@ -13,4 +13,4 @@ Web application DX template for Bun, TypeScript, and Node.js.
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/lloydrichards/devcontainer-template/blob/main/src/web-app/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/lloydrichards/devcontainer-templates/blob/main/src/web-app/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
