@@ -8,19 +8,11 @@
       "installOhMyZshConfig": true
     },
     "ghcr.io/shyim/devcontainers-features/bun:0": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/stu-bell/devcontainer-features/open-code:0": {}
+    "ghcr.io/devcontainers/features/github-cli:1": {}
   },
   "customizations": {
     "vscode": {
-      "settings": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "biomejs.biome"
-      },
-      "extensions": ["biomejs.biome", "oven.bun-vscode"]
+      "extensions": ["oven.bun-vscode"]
     }
-  },
-  "mounts": [
-    "source=${localEnv:HOME}/.config/opencode,target=/home/node/.config/opencode,type=bind,readonly"
-  ]
+  }
 }
