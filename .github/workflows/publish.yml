@@ -1,0 +1,47 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: "Publish Templates"
+        uses: devcontainers/action@v1
+        with:
+          publish-templates: "true"
+          base-path-to-templates: "./src"
+          generate-docs: "true"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create PR for Documentation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git config --global user.email github-actions@github.com
+          git config --global user.name github-actions
+
+          branch=docs/automated-documentation-update-$GITHUB_RUN_ID
+          git checkout -b $branch
+
+          message='docs: automated documentation update'
+          git add */**/README.md
+
+          # Commit only if there are changes
+          if git commit -m 'docs: automated documentation update [skip ci]'; then
+              # Use -u and -f to ensure the branch is pushed regardless of remote state
+              git push -u origin "$branch" -f
+              gh pr create --title "$message" --body "$message"
+          else
+              echo "No changes to commit"
+          fi
